@@ -1,0 +1,5 @@
+1. cost params instead of dep params- for both depreciation and appreaciation
+2. multi variable functions are required for cost params
+3. ability to define x-point scales with representative string/integer representations that can be attached to an
+attribute so that the user can select one of the values
+4. cost params should be independent

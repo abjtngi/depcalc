@@ -1,0 +1,65 @@
+{% extends "depparams/base.html" %}
+
+{% block title %}Article creation - Add attributes{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-sm-8"><h1>Article creation - Add attributes</h1></div>
+    <div class="row">
+        <form class="form-horizontal" role="form" method="post" action="{% url "article_creation_add_attributes_save" %}">
+            {% csrf_token %}
+            <input type="hidden" name="article-id" value="{{ article_id }}">
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-4"><h2 class="text-center text-success">Add attribute(s)</h2></div>
+            </div>
+            <div class="form-group">
+                <label for="attribute-0" class="col-sm-2 control-label">Attribute Name</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="attributename-0" name="attributename-0"
+                           placeholder="Enter attributename">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description-attribute-0" class="col-sm-2 control-label">Attribute Description</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="description-attribute-0" name="description-attribute-0"
+                           placeholder="Enter attributename">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="max-value-attribute-0" class="col-sm-2 control-label">Max possible value</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="max-value-attribute-0" name="max-value-attribute-0"
+                           placeholder="Enter max possible value">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="min-value-attribute-0" class="col-sm-2 control-label">Min possible value</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="min-value-attribute-0" name="min-value-attribute-0"
+                           placeholder="Enter min possible value">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+            {% if messages %}
+                    {% for message in messages %}
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <p class="error">{{ message }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+            {% endif %}
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
+$("#addMore").click(function (){
+<div></div>
+});
